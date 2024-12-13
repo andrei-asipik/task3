@@ -1,7 +1,11 @@
-import './App.css';
+import Header from './components/organisms/Header/Header';
 
 function App() {
-  return <>hi</>;
+  return (
+    <>
+      <Header />
+    </>
+  );
 }
 
 export default App;
