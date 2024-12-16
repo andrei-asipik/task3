@@ -10,16 +10,27 @@ const __dirname = path.dirname(__filename);
 
 export default defineConfig({
   plugins: [react(), svgr()],
-  css: {
-    preprocessorOptions: {
-      scss: {
-        additionalData: `@use './main.scss' as *;`,
-      },
-    },
-  },
+  // css: {
+  //   preprocessorOptions: {
+  //     scss: {
+  //       additionalData: `@use './main.scss' as *;`,
+  //     },
+  //   },
+  // },
+  // css: {
+  //   preprocessorOptions: {
+  //     scss: {
+  //       additionalData: '@use "@/src/assets/styles/import.scss";',
+  //     },
+  //   },
+  // },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),
+      '@styles': path.resolve(__dirname, 'src/assets/styles'),
+      '@icons': path.resolve(__dirname, 'src/assets/icons'),
+      '@images': path.resolve(__dirname, 'src/assets/images'),
+      '@components': path.resolve(__dirname, 'src/components'),
     },
   },
 });
