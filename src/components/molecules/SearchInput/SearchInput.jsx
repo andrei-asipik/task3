@@ -1,13 +1,14 @@
-import styles from './SearchInput.module.scss';
-import IconSearch from './search.svg?react';
+import Button from '../../atoms/Button/Button';
+import styles from './styles.module.scss';
+import IconSearch from '@icons/search.svg?react';
 
 function SearchInput() {
   return (
     <div className={styles.searchBox}>
-      <input type="text" placeholder="Search..." className={styles.searchInput} />
-      <button type="button" className={styles.searchButton}>
+      <input type="text" placeholder="Search" className={styles.searchInput} />
+      <Button>
         <IconSearch />
-      </button>
+      </Button>
     </div>
   );
 }

@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700&display=swap');
+
+@mixin mulish {
+  font-family: 'Mulish', 'Open Sans', sans-serif;
+  font-style: normal;
+}
+
+@mixin mulish-16 {
+  @include mulish;
+  font-size: 16px;
+  font-weight: 400;
+}
+@mixin mulish-12 {
+  @include mulish;
+  font-size: 12px;
+  font-weight: 400;
+}

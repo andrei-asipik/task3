@@ -1,0 +1,90 @@
+@use '@styles/colors.scss' as colors;
+@use '@styles/fonts.scss' as fonts;
+@use '@styles/breakpoints.scss' as breakpoints;
+
+.header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  padding-right: 70px;
+
+  @include breakpoints.big-tablet {
+    padding-right: 30px;
+  }
+
+  @include breakpoints.mobile {
+    padding-right: 0px;
+  }
+
+  .sidebar {
+    display: flex;
+    min-width: 225px;
+    align-items: center;
+    gap: 28px;
+
+    @include breakpoints.mobile {
+      min-width: min-content;
+    }
+
+    .menuIcon {
+      @include breakpoints.mobile {
+        display: none;
+      }
+    }
+  }
+
+  .profileSettings {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    margin-left: 28px;
+
+    @include breakpoints.mobile {
+      margin-left: 24px;
+    }
+
+    .settingsIcons {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+
+      @include breakpoints.big-tablet {
+        display: none;
+      }
+    }
+
+    .profileIcon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-left: 10px;
+
+      @include breakpoints.mobile {
+        zoom: 0.75;
+        margin-left: 0;
+      }
+    }
+
+    .notifications {
+      position: relative;
+    }
+
+    .counter {
+      position: absolute;
+      top: -6px;
+      right: -5px;
+      width: 18px;
+      height: 18px;
+      background: colors.$red;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include fonts.mulish-12;
+      color: colors.$white;
+    }
+  }
+}

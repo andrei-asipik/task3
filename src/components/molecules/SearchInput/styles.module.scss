@@ -1,0 +1,35 @@
+@use '@styles/colors.scss' as colors;
+@use '@styles/fonts.scss' as fonts;
+@use '@styles/breakpoints.scss' as breakpoints;
+
+.searchBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: auto;
+  padding-right: 12px;
+  background: colors.$input-dark;
+  border-radius: 22px;
+  overflow: hidden;
+  max-width: 830px;
+  width: 100%;
+
+  @include breakpoints.mobile {
+    background: transparent;
+    justify-content: end;
+    padding-right: 0;
+  }
+
+  .searchInput {
+    @include fonts.mulish-16;
+    padding: 12px 12px 12px 24px;
+    width: 100%;
+    border: none;
+    outline: none;
+    background: none;
+
+    @include breakpoints.mobile {
+      display: none;
+    }
+  }
+}
