@@ -1,0 +1,64 @@
+@use '@styles/colors.scss' as colors;
+@use '@styles/fonts.scss' as fonts;
+@use '@styles/breakpoints.scss' as breakpoints;
+
+.aside {
+  min-height: 100%;
+  width: 225px;
+  color: colors.$text-dark;
+
+  @include breakpoints.tablet {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    margin-bottom: 58px;
+
+    .item:nth-child(3) {
+      margin-bottom: 32px;
+    }
+  }
+
+  .item {
+    display: flex;
+    gap: 13px;
+    align-items: center;
+    cursor: pointer;
+
+    .container {
+      width: 20px;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .active {
+    color: colors.$red;
+  }
+
+  .title {
+    @include fonts.mulish-18-bold;
+    color: colors.$white;
+    margin-bottom: 7px;
+  }
+
+  .subscriptions {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+  }
+
+  .avatar {
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
+
+  .setting {
+    margin-top: 50px;
+  }
+}

@@ -10,8 +10,21 @@
   font-size: 16px;
   font-weight: 400;
 }
+
 @mixin mulish-12 {
   @include mulish;
   font-size: 12px;
+  font-weight: 400;
+}
+
+@mixin mulish-18-bold {
+  @include mulish;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+@mixin mulish-10 {
+  @include mulish;
+  font-size: 10px;
   font-weight: 400;
 }
