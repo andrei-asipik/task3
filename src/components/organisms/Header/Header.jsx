@@ -11,7 +11,7 @@ import Button from '@components/atoms/Button/Button';
 function Header() {
   return (
     <header className={styles.header}>
-      <div className={styles.sidebar}>
+      <div className={styles.headerSidebar}>
         <Button className={styles.menuIcon}>
           <IconMenu />
         </Button>

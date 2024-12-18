@@ -1,11 +1,21 @@
 @use '@styles/breakpoints.scss' as breakpoints;
 
 .layout {
-  padding: 20px 0 40px 30px;
+  padding: 0 0 40px 30px;
   display: flex;
   flex-wrap: wrap;
+  flex: 1;
+
+  @include breakpoints.tablet {
+    padding: 0px 30px 30px;
+  }
 
   @include breakpoints.mobile {
-    padding: 10px 16px 0 16px;
+    padding: 0 16px 20px 16px;
+  }
+
+  .main {
+    display: flex;
+    width: 100%;
   }
 }

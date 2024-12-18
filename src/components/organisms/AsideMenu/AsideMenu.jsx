@@ -3,6 +3,7 @@ import IconHome from '@icons/home.svg?react';
 import IconTrending from '@icons/trending.svg?react';
 import IconSubscriptions from '@icons/subscriptions.svg?react';
 import IconLibrary from '@icons/library.svg?react';
+import IconHistory from '@icons/history.svg?react';
 import IconWatchLater from '@icons/watchLater.svg?react';
 import IconFavourites from '@icons/favourites.svg?react';
 import IconLiked from '@icons/liked.svg?react';
@@ -16,6 +17,7 @@ const menuItems = [
   { icon: <IconTrending />, label: 'Trending' },
   { icon: <IconSubscriptions />, label: 'Subscriptions' },
   { icon: <IconLibrary />, label: 'Library' },
+  { icon: <IconHistory />, label: 'History' },
   { icon: <IconWatchLater />, label: 'Watch Later' },
   { icon: <IconFavourites />, label: 'Favourites' },
   { icon: <IconLiked />, label: 'Liked Videos' },

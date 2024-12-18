@@ -7,6 +7,8 @@
   color: colors.$text-dark;
   display: none;
   border-top: 2px solid colors.$text-dark;
+  // position: sticky;
+  // bottom: 0;
 
   @include breakpoints.tablet {
     display: block;

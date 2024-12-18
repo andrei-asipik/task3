@@ -2,4 +2,6 @@ $background-dark: #17171e;
 $input-dark: #2c2c32;
 $red: #ff0000;
 $white: #ffffff;
-$text-dark: mix($white, transparent, 40%);
+$black: #000000;
+$text-dark: rgba($white, 0.4);
+$duration-mark: rgba($black, 0.3);

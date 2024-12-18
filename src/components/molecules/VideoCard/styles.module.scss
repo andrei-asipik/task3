@@ -1,0 +1,93 @@
+@use '@styles/colors.scss' as colors;
+@use '@styles/fonts.scss' as fonts;
+@use '@styles/breakpoints.scss' as breakpoints;
+
+.videoCard {
+  display: flex;
+  flex-direction: column;
+  color: colors.$white;
+  width: 100%;
+
+  @include breakpoints.tablet {
+    width: 47%;
+  }
+
+  @include breakpoints.mobile {
+    width: 100%;
+  }
+
+  .thumbnail {
+    position: relative;
+    border-radius: 14px;
+    overflow: hidden;
+    width: 100%;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+
+      @include breakpoints.tablet {
+        height: 150px;
+      }
+      @include breakpoints.mobile {
+        height: 150px;
+      }
+    }
+
+    .duration {
+      position: absolute;
+      bottom: 12px;
+      right: 10px;
+      background-color: colors.$duration-mark;
+      color: colors.$white;
+      padding: 2px 9px;
+      line-height: 1.5;
+      border-radius: 12px;
+      @include fonts.mulish-14;
+    }
+  }
+
+  .sm {
+    width: 250px;
+    height: 150px;
+
+    @include breakpoints.tablet {
+      max-width: 100%;
+      width: auto;
+      height: auto;
+    }
+  }
+
+  .lg {
+    width: 540px;
+    height: 250px;
+  }
+
+  .details {
+    padding-top: 10px;
+    @include breakpoints.mobile {
+      padding-top: 5px;
+    }
+
+    .title {
+      margin: 0;
+      @include fonts.mulish-16-bold;
+    }
+
+    .info {
+      @include fonts.mulish-13;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: colors.$text-dark;
+
+      .meta {
+        margin: 4px 0;
+      }
+
+      .author {
+        margin-left: 5px;
+      }
+    }
+  }
+}

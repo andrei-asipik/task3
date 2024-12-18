@@ -15,3 +15,15 @@
     @content;
   }
 }
+
+@mixin laptop {
+  @media (width <= 1280px) {
+    @content;
+  }
+}
+
+@mixin custom($width) {
+  @media (width <= $width) {
+    @content;
+  }
+}

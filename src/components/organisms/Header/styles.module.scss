@@ -8,24 +8,26 @@
   width: 100%;
   justify-content: space-between;
   margin-bottom: 50px;
-  padding-right: 70px;
+  padding: 20px 50px 0px 30px;
 
   @include breakpoints.big-tablet {
     padding-right: 30px;
   }
 
   @include breakpoints.mobile {
-    padding-right: 0px;
+    padding: 10px 16px 0 16px;
+    margin-bottom: 21px;
   }
 
-  .sidebar {
+  .headerSidebar {
     display: flex;
     min-width: 225px;
     align-items: center;
     gap: 28px;
 
-    @include breakpoints.mobile {
+    @include breakpoints.tablet {
       min-width: min-content;
+      margin-right: 30px;
     }
 
     .menuIcon {
@@ -48,7 +50,7 @@
     .settingsIcons {
       display: flex;
       align-items: center;
-      gap: 28px;
+      gap: 50px;
 
       @include breakpoints.big-tablet {
         display: none;
@@ -60,7 +62,7 @@
       height: 40px;
       border-radius: 50%;
       overflow: hidden;
-      margin-left: 10px;
+      margin: 0 20px 0 20px;
 
       @include breakpoints.mobile {
         zoom: 0.75;
