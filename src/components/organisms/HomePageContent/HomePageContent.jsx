@@ -4,7 +4,7 @@ import VideoCard from '../../molecules/VideoCard/VideoCard';
 import { videoDataDolly, videoDataRecommended } from './mockData';
 import styles from './styles.module.scss';
 
-function Content() {
+function HomePageContent() {
   return (
     <article className={styles.content}>
       <section className={styles.channel}>
@@ -87,4 +87,4 @@ function Content() {
   );
 }
 
-export default Content;
+export default HomePageContent;

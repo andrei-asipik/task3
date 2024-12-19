@@ -1,0 +1,199 @@
+@use '@styles/fonts.scss' as fonts;
+@use '@styles/colors.scss' as colors;
+@use '@styles/breakpoints.scss' as breakpoints;
+
+.content {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  position: relative;
+  gap: 46px;
+  color: colors.$text-dark;
+  margin-left: 50px;
+
+  @include breakpoints.laptop {
+    gap: 30px;
+    margin-left: 0px;
+  }
+}
+
+.playerSection {
+  width: 100%;
+  margin-left: 0px;
+
+  @include breakpoints.laptop {
+  }
+
+  h1 {
+    @include fonts.mulish-36-bold;
+    color: colors.$white;
+    margin-top: 20px;
+
+    @include breakpoints.big-tablet {
+      margin-top: 13px;
+      @include fonts.mulish-20-bold;
+    }
+  }
+
+  .stat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0 10px;
+
+    span {
+      @include fonts.mulish-20;
+
+      @include breakpoints.big-tablet {
+        @include fonts.mulish-12;
+      }
+    }
+
+    .actions {
+      display: flex;
+      gap: 10px;
+      margin: 4px 40px 0 auto;
+
+      .btn {
+        min-width: 100px;
+        height: fit-content;
+        background-color: colors.$input-dark;
+        padding: 10px 0;
+        border-radius: 20px;
+        color: colors.$white;
+        @include fonts.mulish-16;
+        display: flex;
+        gap: 5px;
+
+        // @include breakpoints.big-tablet {
+        //   margin: 10px 20% 0 70px;
+        // }
+      }
+    }
+  }
+  // }
+
+  // .infoSection {
+  .infoContainer {
+    border-top: 2px solid colors.$text-dark;
+    padding: 40px 0 48px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+
+    .avatar {
+      min-width: 80px;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .info {
+      margin-right: auto;
+
+      h2 {
+        @include fonts.mulish-26-bold;
+        color: colors.$white;
+      }
+
+      span {
+        margin-top: 4px;
+        @include fonts.mulish-13;
+      }
+
+      .description {
+        margin-top: 14px;
+        display: flex;
+        flex-direction: column;
+
+        p {
+          @include fonts.mulish-16;
+          margin-right: auto;
+          line-height: 22px;
+          max-width: 820px;
+        }
+
+        span {
+          margin-top: 15px;
+          @include fonts.mulish-20;
+        }
+      }
+    }
+  }
+}
+
+.nextVideoSection {
+  min-width: 367px;
+  display: flex;
+  flex-direction: column;
+  color: colors.$white;
+
+  @include breakpoints.laptop {
+    min-width: 250px;
+  }
+
+  .sectionHeader {
+    width: 100%;
+    display: flex;
+    margin-bottom: 26px;
+    justify-content: space-between;
+
+    @include breakpoints.mobile {
+      margin-bottom: 13px;
+    }
+  }
+
+  .autoplay {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: auto;
+    @include fonts.mulish-16-bold;
+    letter-spacing: 1px;
+  }
+
+  h2 {
+    @include fonts.mulish-36-bold;
+  }
+
+  .container {
+    display: flex;
+    gap: 25px;
+    width: 100%;
+    flex-direction: column;
+
+    @include breakpoints.tablet {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+    }
+  }
+}
+
+.subscribeBtn {
+  min-width: fit-content;
+  height: fit-content;
+  background-color: colors.$red;
+
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: colors.$white;
+  @include fonts.mulish-16;
+
+  @include breakpoints.big-tablet {
+    margin: 10px 20% 0 70px;
+  }
+}
+
+// .hidden {
+//   @include breakpoints.tablet {
+//     display: none;
+//   }
+// }

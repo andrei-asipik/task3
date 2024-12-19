@@ -1,10 +1,15 @@
-import HomePage from './components/pages/HomePage';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomePage from './components/pages/HomePage/HomePage';
+import VideoPlayerPage from './components/pages/VideoPlayerPage/VideoPlayerPage';
 
 function App() {
   return (
-    <>
-      <HomePage />
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/player" element={<VideoPlayerPage />} />
+      </Routes>
+    </Router>
   );
 }
 

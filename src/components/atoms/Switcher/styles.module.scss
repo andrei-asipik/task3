@@ -1,0 +1,28 @@
+@use '@styles/colors.scss' as colors;
+
+.switcher {
+  width: 44px;
+  height: 28px;
+  background: colors.$input-dark;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 2px;
+  transition: background 0.3s;
+
+  & .toggle {
+    width: 24px;
+    height: 24px;
+    background: colors.$white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s;
+
+    &.active {
+      transform: translateX(16px);
+    }
+  }
+}

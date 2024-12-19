@@ -48,3 +48,25 @@
   @include mulish;
   font-size: 13px;
 }
+
+@mixin mulish-36-bold {
+  @include mulish;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+@mixin mulish-18 {
+  @include mulish;
+  font-size: 18px;
+}
+
+@mixin mulish-20 {
+  @include mulish;
+  font-size: 20px;
+}
+
+@mixin mulish-20-bold {
+  @include mulish;
+  font-size: 20px;
+  font-weight: 700;
+}

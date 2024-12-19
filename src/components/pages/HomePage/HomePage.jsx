@@ -1,7 +1,7 @@
-import AsideMenu from '../organisms/AsideMenu/AsideMenu';
-import FooterMenu from '../organisms/FooterMenu/FooterMenu';
-import Header from '../organisms/Header/Header';
-import Content from '../organisms/Content/Content';
+import AsideMenu from '../../organisms/AsideMenu/AsideMenu';
+import FooterMenu from '../../organisms/FooterMenu/FooterMenu';
+import Header from '../../organisms/Header/Header';
+import HomePageContent from '../../organisms/HomePageContent/HomePageContent';
 
 import styles from './styles.module.scss';
 
@@ -12,7 +12,7 @@ function HomePage() {
       <div className={styles.layout}>
         <main className={styles.main}>
           <AsideMenu />
-          <Content />
+          <HomePageContent />
         </main>
       </div>
       <FooterMenu />

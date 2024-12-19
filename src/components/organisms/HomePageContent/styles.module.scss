@@ -21,7 +21,7 @@
     margin-bottom: 30px;
     justify-content: space-between;
     align-items: end;
-    padding-right: 150px;
+    padding-right: 130px;
 
     @include breakpoints.laptop {
       padding-right: 30px;
@@ -78,10 +78,19 @@
     gap: 40px;
     width: 100%;
 
+    flex: 1;
     @include breakpoints.tablet {
-      flex-wrap: wrap;
-      justify-content: center;
+      grid-template-columns: repeat(2, 1fr);
+      display: grid;
       gap: 25px;
+
+      img {
+        height: 150px;
+      }
+    }
+
+    @include breakpoints.mobile {
+      grid-template-columns: 1fr;
     }
   }
 }
