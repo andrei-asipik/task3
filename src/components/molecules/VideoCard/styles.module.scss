@@ -49,6 +49,10 @@
 
     @include breakpoints.laptop {
       width: auto;
+      height: auto;
+    }
+
+    @include breakpoints.mobile {
       height: 150px;
     }
   }
