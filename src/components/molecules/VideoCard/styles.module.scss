@@ -48,9 +48,8 @@
     height: 213px;
 
     @include breakpoints.laptop {
-      max-width: 100%;
       width: auto;
-      height: auto;
+      height: 150px;
     }
   }
 
@@ -96,6 +95,11 @@
     .title {
       margin-top: 13px;
       @include fonts.mulish-26-bold;
+
+      @include breakpoints.laptop {
+        margin-top: 0;
+        @include fonts.mulish-16-bold;
+      }
     }
 
     .info {
@@ -105,6 +109,11 @@
       align-items: center;
       justify-content: space-between;
       color: colors.$text-dark;
+
+      @include breakpoints.laptop {
+        margin-top: 4px;
+        @include fonts.mulish-13;
+      }
 
       .author {
         margin-left: 5px;

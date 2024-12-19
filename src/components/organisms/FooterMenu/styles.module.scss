@@ -7,6 +7,10 @@
   color: colors.$text-dark;
   display: none;
   border-top: 2px solid colors.$text-dark;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: colors.$background-dark;
 
   @include breakpoints.tablet {
     display: block;

@@ -9,6 +9,10 @@
   border-radius: 14px;
   overflow: hidden;
 
+  @include breakpoints.mobile {
+    border-radius: 0;
+  }
+
   .player {
     position: absolute;
     top: 0;

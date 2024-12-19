@@ -7,7 +7,8 @@ import styles from './styles.module.scss';
 import IconLike from '@icons/like.svg?react';
 import IconDislike from '@icons/dislike.svg?react';
 import IconShare from '@icons/share.svg?react';
-import IconMore from '@icons/moreDots.svg?react';
+import IconMoreDots from '@icons/moreDots.svg?react';
+import IconMore from '@icons/more.svg?react';
 import VideoPlayer from '../../molecules/VideoPlayer/VideoPlayer';
 
 function VideoPlayerPageContent() {
@@ -15,7 +16,12 @@ function VideoPlayerPageContent() {
     <article className={styles.content}>
       <section className={styles.playerSection}>
         <VideoPlayer />
-        <h1>Dude You Re Getting A Telescope</h1>
+        <div className={styles.title}>
+          <h1>Dude You Re Getting A Telescope</h1>
+          <div>
+            <IconMore />
+          </div>
+        </div>
         <div className={styles.stat}>
           <span>123k views</span>
           <div className={styles.actions}>
@@ -33,19 +39,20 @@ function VideoPlayerPageContent() {
             </Button>
           </div>
           <Button className={styles.btn}>
-            <IconMore />
+            <IconMoreDots />
           </Button>
         </div>
-        {/* </section>
 
-      <section className={styles.infoSection}> */}
         <div className={styles.infoContainer}>
           <div className={styles.avatar}>
             <img src="/Oval (6).jpg" alt="Dollie Blair" />
           </div>
           <div className={styles.info}>
             <h2>Food & Drink</h2>
-            <span>Published on 14 Jun 2019</span>
+            <span className={styles.published}>Published on 14 Jun 2019</span>
+            <span className={styles.subscribed}>245K subscribed</span>
+            <Button className={styles.subscribeBtn}>Subscribe 2.3m</Button>
+            <Button className={styles.subscribeBtnAlt}>Subscribe</Button>
             <div className={styles.description}>
               <p>
                 A successful marketing plan relies heavily on the pulling-power of advertising copy.
@@ -57,7 +64,6 @@ function VideoPlayerPageContent() {
               <span>Show more</span>
             </div>
           </div>
-          <Button className={styles.subscribeBtn}>Subscribe 2.3m</Button>
         </div>
       </section>
 

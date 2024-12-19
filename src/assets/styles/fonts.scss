@@ -70,3 +70,8 @@
   font-size: 20px;
   font-weight: 700;
 }
+@mixin mulish-10-bold {
+  @include mulish;
+  font-size: 10px;
+  font-weight: 700;
+}
