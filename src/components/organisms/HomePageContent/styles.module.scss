@@ -77,9 +77,10 @@
     display: flex;
     gap: 40px;
     width: 100%;
-
     flex: 1;
+
     @include breakpoints.tablet {
+      margin-top: 20px;
       grid-template-columns: repeat(2, 1fr);
       display: grid;
       gap: 25px;
@@ -90,6 +91,7 @@
     }
 
     @include breakpoints.mobile {
+      margin-top: 0px;
       grid-template-columns: 1fr;
     }
   }

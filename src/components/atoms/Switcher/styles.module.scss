@@ -11,6 +11,7 @@
   cursor: pointer;
   padding: 2px;
   transition: background 0.3s;
+  transform: rotate(180deg);
 
   @include breakpoints.big-tablet {
     transform: scale(0.68);

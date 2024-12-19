@@ -8,7 +8,15 @@ import IconView from '@icons/view.svg?react';
 import SearchInput from '@components/molecules/SearchInput/SearchInput';
 import Button from '@components/atoms/Button/Button';
 
+import { useNavigate } from 'react-router-dom';
+
 function Header() {
+  const navigate = useNavigate();
+
+  const goToVideoPlayerPage = () => {
+    navigate('/player');
+  };
+
   return (
     <header className={styles.header}>
       <div className={styles.headerSidebar}>
@@ -17,9 +25,7 @@ function Header() {
         </Button>
         <LogoYoutube />
       </div>
-
       <SearchInput />
-
       <div className={styles.profileSettings}>
         <div className={styles.settingsIcons}>
           <Button>
@@ -36,7 +42,7 @@ function Header() {
           </Button>
         </div>
         <Button>
-          <div className={styles.profileIcon}>
+          <div className={styles.profileIcon} onClick={goToVideoPlayerPage}>
             <img src="/Userpic.jpg" alt="user" />
           </div>
         </Button>

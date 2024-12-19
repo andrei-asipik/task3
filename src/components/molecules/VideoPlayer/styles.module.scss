@@ -11,6 +11,8 @@
 
   @include breakpoints.mobile {
     border-radius: 0;
+    padding-bottom: 56.25%;
+    overflow: visible;
   }
 
   .player {
