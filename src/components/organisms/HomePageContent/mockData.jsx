@@ -36,7 +36,7 @@ export const videoDataDolly = [
     author: 'Dollie Blair',
   },
   {
-    id: 4,
+    id: 5,
     image: '/Cover (4).jpg',
     title: 'Medical Care Is Just',
     views: '54k',
@@ -45,7 +45,7 @@ export const videoDataDolly = [
     author: 'Dollie Blair',
   },
   {
-    id: 5,
+    id: 6,
     image: '/Cover (5).jpg',
     title: 'Medical Care Is Just',
     views: '54k',
@@ -93,7 +93,7 @@ export const videoDataRecommended = [
     author: 'Dollie Blair',
   },
   {
-    id: 4,
+    id: 5,
     image: '/Cover (4).jpg',
     title: 'Medical Care Is Just',
     views: '54k',

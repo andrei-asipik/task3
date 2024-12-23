@@ -35,7 +35,7 @@ const subscripters = [
   { name: 'Leah Berry', avatar: 'Oval (5).jpg' },
 ];
 
-function AsideMenu() {
+export function AsideMenu() {
   return (
     <aside className={styles.aside}>
       <nav className={styles.menu}>
@@ -68,5 +68,3 @@ function AsideMenu() {
     </aside>
   );
 }
-
-export default AsideMenu;

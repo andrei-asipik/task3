@@ -1,10 +1,10 @@
-import Button from '../../atoms/Button/Button';
-import NavButtons from '../../molecules/NavButtons/NavButtons';
-import VideoCard from '../../molecules/VideoCard/VideoCard';
+import { Button } from '../../atoms/Button/Button';
+import { NavButtons } from '../../molecules/NavButtons/NavButtons';
+import { VideoCard } from '../../molecules/VideoCard/VideoCard';
 import { videoDataDolly, videoDataRecommended } from './mockData';
 import styles from './styles.module.scss';
 
-function HomePageContent() {
+export function HomePageContent() {
   return (
     <article className={styles.content}>
       <section className={styles.channel}>
@@ -86,5 +86,3 @@ function HomePageContent() {
     </article>
   );
 }
-
-export default HomePageContent;

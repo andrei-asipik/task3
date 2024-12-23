@@ -1,23 +1,12 @@
-import AsideMenu from '../../organisms/AsideMenu/AsideMenu';
-import FooterMenu from '../../organisms/FooterMenu/FooterMenu';
-import Header from '../../organisms/Header/Header';
-import HomePageContent from '../../organisms/HomePageContent/HomePageContent';
-
+import { AsideMenu } from '../../organisms/AsideMenu/AsideMenu';
+import { HomePageContent } from '../../organisms/HomePageContent/HomePageContent';
 import styles from './styles.module.scss';
 
-function HomePage() {
+export function HomePage() {
   return (
-    <>
-      <Header />
-      <div className={styles.layout}>
-        <main className={styles.main}>
-          <AsideMenu />
-          <HomePageContent />
-        </main>
-      </div>
-      <FooterMenu />
-    </>
+    <div className={styles.layout}>
+      <AsideMenu />
+      <HomePageContent />
+    </div>
   );
 }
-
-export default HomePage;

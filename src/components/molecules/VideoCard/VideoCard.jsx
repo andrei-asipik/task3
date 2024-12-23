@@ -1,6 +1,6 @@
 import styles from './styles.module.scss';
 
-function VideoCard({ image, title, views, timeAgo, duration, author, size }) {
+export function VideoCard({ image, title, views, timeAgo, duration, author, size }) {
   const sizeClass =
     size === 'sm' ? styles.sm : size === 'md' ? styles.md : size === 'lg' ? styles.lg : '';
 
@@ -23,5 +23,3 @@ function VideoCard({ image, title, views, timeAgo, duration, author, size }) {
     </div>
   );
 }
-
-export default VideoCard;

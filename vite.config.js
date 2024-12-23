@@ -10,20 +10,6 @@ const __dirname = path.dirname(__filename);
 
 export default defineConfig({
   plugins: [react(), svgr()],
-  // css: {
-  //   preprocessorOptions: {
-  //     scss: {
-  //       additionalData: `@use './main.scss' as *;`,
-  //     },
-  //   },
-  // },
-  // css: {
-  //   preprocessorOptions: {
-  //     scss: {
-  //       additionalData: '@use "@/src/assets/styles/import.scss";',
-  //     },
-  //   },
-  // },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),

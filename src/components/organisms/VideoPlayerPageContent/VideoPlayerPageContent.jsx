@@ -1,6 +1,6 @@
-import Button from '../../atoms/Button/Button';
-import Switcher from '../../atoms/Switcher/Switcher';
-import VideoCard from '../../molecules/VideoCard/VideoCard';
+import { Button } from '../../atoms/Button/Button';
+import { Switcher } from '../../atoms/Switcher/Switcher';
+import { VideoCard } from '../../molecules/VideoCard/VideoCard';
 import { videoDataDolly } from './mockData';
 import styles from './styles.module.scss';
 
@@ -9,9 +9,9 @@ import IconDislike from '@icons/dislike.svg?react';
 import IconShare from '@icons/share.svg?react';
 import IconMoreDots from '@icons/moreDots.svg?react';
 import IconMore from '@icons/more.svg?react';
-import VideoPlayer from '../../molecules/VideoPlayer/VideoPlayer';
+import { VideoPlayer } from '../../molecules/VideoPlayer/VideoPlayer';
 
-function VideoPlayerPageContent() {
+export function VideoPlayerPageContent() {
   return (
     <article className={styles.content}>
       <section className={styles.playerSection}>
@@ -92,5 +92,3 @@ function VideoPlayerPageContent() {
     </article>
   );
 }
-
-export default VideoPlayerPageContent;

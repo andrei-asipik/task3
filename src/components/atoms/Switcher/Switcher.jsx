@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styles from './styles.module.scss';
 
-function Switcher() {
+export function Switcher() {
   const [isActive, setIsActive] = useState(false);
 
   const handleToggle = () => {
@@ -14,5 +14,3 @@ function Switcher() {
     </div>
   );
 }
-
-export default Switcher;

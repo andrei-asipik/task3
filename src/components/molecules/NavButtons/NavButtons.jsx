@@ -1,8 +1,8 @@
-import Button from '../../atoms/Button/Button';
+import { Button } from '../../atoms/Button/Button';
 import styles from './styles.module.scss';
 import IconArrow from '@icons/arrow.svg?react';
 
-function NavButtons() {
+export function NavButtons() {
   return (
     <div className={styles.buttons}>
       <Button className={styles.button}>
@@ -14,5 +14,3 @@ function NavButtons() {
     </div>
   );
 }
-
-export default NavButtons;
