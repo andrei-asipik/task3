@@ -1,0 +1,16 @@
+@use '@styles/breakpoints.scss' as breakpoints;
+
+.layout {
+  padding: 30px 0 40px 30px;
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+
+  @include breakpoints.tablet {
+    padding: 0px 0px 90px;
+  }
+
+  aside {
+    margin-top: 20px;
+  }
+}

@@ -1,0 +1,399 @@
+@use '@styles/fonts.scss' as fonts;
+@use '@styles/colors.scss' as colors;
+@use '@styles/breakpoints.scss' as breakpoints;
+
+.article {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 46px;
+
+  @include breakpoints.tablet {
+    gap: 0;
+  }
+}
+
+.channel {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-right: 40px;
+  overflow: hidden;
+
+  .wallpaper {
+    width: 100%;
+    height: 280px;
+    padding-right: 50px;
+
+    @include breakpoints.big-tablet {
+      height: 200px;
+      padding-right: 30px;
+    }
+
+    @include breakpoints.tablet {
+      margin-top: 20px;
+      padding-right: 0px;
+      height: 150px;
+    }
+
+    @include breakpoints.mobile {
+      margin-top: 0px;
+      height: 100px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 14px;
+
+      @include breakpoints.tablet {
+        border-radius: 0px;
+      }
+    }
+  }
+
+  .mainContent {
+    padding: 30px 50px 0 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+
+    @include breakpoints.big-tablet {
+      padding-right: 30px;
+    }
+
+    @include breakpoints.tablet {
+      padding: 20px 16px;
+    }
+
+    @include breakpoints.mobile {
+      position: relative;
+      padding: 0px 16px;
+      top: -35px;
+    }
+
+    .header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      @include breakpoints.mobile {
+        flex-direction: column;
+      }
+
+      div:has(h2) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-right: auto;
+      }
+      .avatar {
+        min-width: 80px;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 14px;
+
+        @include breakpoints.tablet {
+          min-width: 70px;
+          width: 70px;
+          height: 70px;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .subscribed {
+        margin-top: 4px;
+        @include fonts.mulish-13;
+        color: colors.$text-dark;
+      }
+
+      h2 {
+        @include fonts.mulish-26-bold;
+        color: colors.$white;
+
+        @include breakpoints.mobile {
+          @include fonts.mulish-20-bold;
+        }
+      }
+    }
+
+    .content {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+
+      @include breakpoints.custom(1440px) {
+        flex-direction: column;
+      }
+
+      .channelInfo {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+
+        .tabs {
+          display: flex;
+          gap: 70px;
+
+          @include breakpoints.laptop {
+            gap: 40px;
+          }
+
+          @include breakpoints.laptop {
+            margin-top: 10px;
+          }
+
+          nav ul {
+            display: flex;
+            gap: 70px;
+            list-style-type: none;
+            @include fonts.mulish-18-bold;
+            color: colors.$white;
+
+            @include breakpoints.laptop {
+              gap: 40px;
+              @include fonts.mulish-14;
+            }
+
+            li {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+
+            @include breakpoints.big-tablet {
+              li:nth-child(n + 4) {
+                display: none;
+              }
+            }
+          }
+
+          & > button:last-of-type {
+            display: none;
+          }
+
+          @include breakpoints.big-tablet {
+            & > button:first-of-type {
+              display: none;
+            }
+            & > button:last-of-type {
+              display: block;
+            }
+          }
+
+          .active {
+            color: colors.$red;
+            border-bottom: 2px solid colors.$red;
+          }
+        }
+
+        .videoContainer {
+          display: flex;
+          margin-top: 54px;
+          max-width: 1120px;
+          flex-wrap: nowrap;
+          gap: 32px;
+
+          @include breakpoints.laptop {
+            flex-direction: column;
+            margin-top: 30px;
+            gap: 20px;
+          }
+
+          @include breakpoints.mobile {
+            display: none;
+          }
+
+          .video {
+            object-fit: fill;
+          }
+
+          .description {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            color: colors.$text-dark;
+            width: 50%;
+
+            @include breakpoints.laptop {
+              margin-top: 0px;
+              width: 100%;
+            }
+
+            h3 {
+              @include fonts.mulish-26-bold;
+              line-height: 34px;
+              color: colors.$white;
+              max-width: 450px;
+            }
+
+            p {
+              @include fonts.mulish-16;
+              line-height: 22px;
+              margin-top: 10px;
+
+              // @include breakpoints.big-tablet {
+              //   @include fonts.mulish-14;
+              // }
+            }
+
+            span {
+              margin-top: 32px;
+              @include fonts.mulish-16;
+              line-height: 22px;
+
+              @include breakpoints.big-tablet {
+                @include fonts.mulish-16;
+              }
+            }
+          }
+        }
+      }
+
+      .channelVideos {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        max-width: 270px;
+        width: 100%;
+        margin: 0 auto 0 30px;
+
+        @include breakpoints.custom(1440px) {
+          max-width: none;
+          flex-direction: row;
+          justify-content: space-between;
+          margin: 40px 0 0;
+        }
+
+        @include breakpoints.big-tablet {
+          display: none;
+        }
+
+        h4 {
+          @include fonts.mulish-16;
+          color: colors.$text-dark;
+          margin-bottom: 5px;
+
+          @include breakpoints.custom(1440px) {
+            align-items: center;
+            display: flex;
+          }
+        }
+
+        .item {
+          display: flex;
+          gap: 20px;
+          align-items: center;
+          cursor: pointer;
+          @include fonts.mulish-18-bold;
+          color: colors.$white;
+        }
+
+        .avatar {
+          border-radius: 50%;
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+
+          img {
+            min-width: 50px;
+            height: 50px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.videos {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoints.tablet {
+    padding: 0 16px;
+  }
+
+  @include breakpoints.mobile {
+    position: relative;
+    top: -15px;
+  }
+
+  .channelHeader {
+    width: 100%;
+    display: flex;
+    margin-bottom: 30px;
+    justify-content: space-between;
+    align-items: end;
+    padding-right: 130px;
+
+    @include breakpoints.laptop {
+      padding-right: 30px;
+    }
+
+    @include breakpoints.tablet {
+      display: none;
+    }
+
+    h2 {
+      color: colors.$white;
+      @include fonts.mulish-26-bold;
+    }
+  }
+
+  .container {
+    display: flex;
+    gap: 40px;
+    width: 100%;
+    flex: 1;
+
+    @include breakpoints.tablet {
+      margin-top: 20px;
+      grid-template-columns: repeat(2, 1fr);
+      display: grid;
+      gap: 25px;
+
+      img {
+        height: 150px;
+      }
+    }
+
+    @include breakpoints.mobile {
+      margin-top: 0px;
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.subscribeBtn {
+  background-color: colors.$red;
+  padding: 10px 20px;
+  height: 40px;
+  margin-bottom: auto;
+  border-radius: 20px;
+  color: colors.$white;
+  @include fonts.mulish-16;
+
+  @include breakpoints.big-tablet {
+    margin: 10px 0 0 10px;
+    @include fonts.mulish-12;
+  }
+
+  @include breakpoints.mobile {
+    height: 35px;
+    margin: 20px 0 0 0;
+    width: fit-content;
+  }
+}

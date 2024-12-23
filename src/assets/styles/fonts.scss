@@ -6,6 +6,32 @@
   font-weight: 400;
 }
 
+@mixin mulish-10-bold {
+  @include mulish;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+@mixin mulish-10 {
+  @include mulish;
+  font-size: 10px;
+}
+
+@mixin mulish-12 {
+  @include mulish;
+  font-size: 12px;
+}
+
+@mixin mulish-13 {
+  @include mulish;
+  font-size: 13px;
+}
+
+@mixin mulish-14 {
+  @include mulish;
+  font-size: 14px;
+}
+
 @mixin mulish-16 {
   @include mulish;
   font-size: 16px;
@@ -17,41 +43,9 @@
   font-weight: 700;
 }
 
-@mixin mulish-12 {
-  @include mulish;
-  font-size: 12px;
-}
-
 @mixin mulish-18-bold {
   @include mulish;
   font-size: 18px;
-  font-weight: 700;
-}
-
-@mixin mulish-10 {
-  @include mulish;
-  font-size: 10px;
-}
-
-@mixin mulish-26-bold {
-  @include mulish;
-  font-size: 26px;
-  font-weight: 700;
-}
-
-@mixin mulish-14 {
-  @include mulish;
-  font-size: 14px;
-}
-
-@mixin mulish-13 {
-  @include mulish;
-  font-size: 13px;
-}
-
-@mixin mulish-36-bold {
-  @include mulish;
-  font-size: 36px;
   font-weight: 700;
 }
 
@@ -70,8 +64,15 @@
   font-size: 20px;
   font-weight: 700;
 }
-@mixin mulish-10-bold {
+
+@mixin mulish-26-bold {
   @include mulish;
-  font-size: 10px;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+@mixin mulish-36-bold {
+  @include mulish;
+  font-size: 36px;
   font-weight: 700;
 }

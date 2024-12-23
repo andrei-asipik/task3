@@ -10,9 +10,9 @@
 
   .thumbnail {
     position: relative;
-    border-radius: 14px;
-    overflow: hidden;
     width: 100%;
+    overflow: hidden;
+    border-radius: 14px;
 
     img {
       width: 100%;
@@ -60,6 +60,11 @@
   .lg {
     width: 540px;
     height: 250px;
+
+    @include breakpoints.laptop {
+      width: auto;
+      height: auto;
+    }
   }
 
   .details {

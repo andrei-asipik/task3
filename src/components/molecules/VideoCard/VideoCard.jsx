@@ -14,7 +14,7 @@ export function VideoCard({ image, title, views, timeAgo, duration, author, size
         <h3 className={styles.title}>{title}</h3>
         <div className={styles.info}>
           <div className={styles.meta}>
-            <span>{views} views</span>
+            {views && <span>{views} views</span>}
             {timeAgo && <span>&nbsp;&nbsp;·&nbsp;&nbsp;{timeAgo} ago</span>}
           </div>
           <div className={styles.author}>{author}</div>
