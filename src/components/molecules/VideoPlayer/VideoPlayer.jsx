@@ -1,6 +1,6 @@
 import styles from './styles.module.scss';
 
-function VideoPlayer() {
+export function VideoPlayer() {
   const videoId = '_bFO8Z1oX_A';
 
   return (
@@ -14,5 +14,3 @@ function VideoPlayer() {
     </div>
   );
 }
-
-export default VideoPlayer;

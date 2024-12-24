@@ -7,15 +7,10 @@
   flex: 1;
 
   @include breakpoints.big-tablet {
-    padding: 20px 30px 30px;
+    padding: 20px 30px 90px;
   }
 
   @include breakpoints.mobile {
-    padding: 0 0px 20px;
-  }
-
-  .main {
-    display: flex;
-    width: 100%;
+    padding: 0 0 90px;
   }
 }

@@ -1,12 +1,12 @@
 import { AsideMenu } from '../../organisms/AsideMenu/AsideMenu';
-import { HomePageContent } from '../../organisms/HomePageContent/HomePageContent';
+import { ChannelPageContent } from '../../organisms/ChannelPageContent/ChannelPageContent';
 import styles from './styles.module.scss';
 
-export function HomePage() {
+export function ChannelPage() {
   return (
     <div className={styles.layout}>
       <AsideMenu />
-      <HomePageContent />
+      <ChannelPageContent />
     </div>
   );
 }

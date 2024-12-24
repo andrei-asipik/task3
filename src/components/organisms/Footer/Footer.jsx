@@ -11,7 +11,7 @@ const menuItems = [
   { icon: <IconLibrary />, label: 'Library' },
 ];
 
-function FooterMenu() {
+export function Footer() {
   return (
     <footer className={styles.footer}>
       <nav className={styles.menu}>
@@ -27,5 +27,3 @@ function FooterMenu() {
     </footer>
   );
 }
-
-export default FooterMenu;

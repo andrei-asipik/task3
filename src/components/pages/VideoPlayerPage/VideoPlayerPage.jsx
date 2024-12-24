@@ -1,21 +1,10 @@
-import FooterMenu from '../../organisms/FooterMenu/FooterMenu';
-import Header from '../../organisms/Header/Header';
-import VideoPlayerPageContent from '../../organisms/VideoPlayerPageContent/VideoPlayerPageContent';
-
+import { VideoPlayerPageContent } from '../../organisms/VideoPlayerPageContent/VideoPlayerPageContent';
 import styles from './styles.module.scss';
 
-function VideoPlayerPage() {
+export function VideoPlayerPage() {
   return (
-    <>
-      <Header />
-      <div className={styles.layout}>
-        <main className={styles.main}>
-          <VideoPlayerPageContent />
-        </main>
-      </div>
-      <FooterMenu />
-    </>
+    <div className={styles.layout}>
+      <VideoPlayerPageContent />
+    </div>
   );
 }
-
-export default VideoPlayerPage;
