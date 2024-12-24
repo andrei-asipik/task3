@@ -29,6 +29,37 @@
       margin-right: 30px;
     }
 
+    @include breakpoints.mobile {
+      min-width: min-content;
+      margin-right: 0px;
+    }
+
+    nav {
+      @include breakpoints.mobile {
+        min-width: auto;
+        overflow: hidden;
+      }
+    }
+
+    .nav {
+      @include breakpoints.mobile {
+        width: 40px;
+      }
+    }
+
+    span {
+      display: none;
+
+      @include breakpoints.mobile {
+        display: block;
+        position: relative;
+        left: -20px;
+        @include fonts.mulish-16-bold;
+        color: colors.$white;
+        white-space: nowrap;
+      }
+    }
+
     .menuIcon {
       @include breakpoints.mobile {
         display: none;
@@ -64,8 +95,27 @@
       margin-left: 20px;
 
       @include breakpoints.mobile {
-        zoom: 0.75;
+        display: none;
+        scale: 0.75;
         margin-left: 0;
+      }
+    }
+
+    .profileIconMobile {
+      display: none;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-left: 0;
+
+      @include breakpoints.mobile {
+        display: flex;
+
+        img {
+          width: 30px;
+          height: 30px;
+        }
       }
     }
 

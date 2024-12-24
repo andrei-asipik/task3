@@ -4,22 +4,37 @@ import LogoYoutube from '@icons/youtubeLogo.svg?react';
 import IconCamera from '@icons/camera.svg?react';
 import IconBell from '@icons/bell.svg?react';
 import IconView from '@icons/view.svg?react';
-
+import IconDots from '@icons/verticalDots.svg?react';
 import { Button } from '@components/atoms/Button/Button';
 import { SearchInput } from '../../molecules/SearchInput/SearchInput';
+import { useLocation } from 'react-router-dom';
 
 export function Header() {
+  const location = useLocation();
+  const page = location.pathname.split('/').filter(Boolean).pop() || 'home';
+
   return (
     <header className={styles.header}>
       <div className={styles.headerSidebar}>
         <Button className={styles.menuIcon}>
           <IconMenu />
         </Button>
-        <nav>
-          <a href="/" className={styles.logo}>
-            <LogoYoutube />
-          </a>
-        </nav>
+        {page === 'channel' ? (
+          <>
+            <nav className={styles.nav}>
+              <a href="/">
+                <LogoYoutube />
+              </a>
+            </nav>
+            <span> Margaret Phelps </span>
+          </>
+        ) : (
+          <nav>
+            <a href="/">
+              <LogoYoutube />
+            </a>
+          </nav>
+        )}
       </div>
       <SearchInput />
       <div className={styles.profileSettings}>
@@ -39,6 +54,9 @@ export function Header() {
         </nav>
         <Button className={styles.profileIcon}>
           <img src="/Userpic.jpg" alt="user" />
+        </Button>
+        <Button className={styles.profileIconMobile}>
+          {page === 'home' ? <img src="/Userpic.jpg" alt="user" /> : <IconDots />}
         </Button>
       </div>
     </header>

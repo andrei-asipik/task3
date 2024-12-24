@@ -133,7 +133,7 @@
       width: 100%;
       justify-content: space-between;
 
-      @include breakpoints.custom(1440px) {
+      @include breakpoints.custom(1680px) {
         flex-direction: column;
       }
 
@@ -243,10 +243,6 @@
               @include fonts.mulish-16;
               line-height: 22px;
               margin-top: 10px;
-
-              // @include breakpoints.big-tablet {
-              //   @include fonts.mulish-14;
-              // }
             }
 
             span {
@@ -270,7 +266,7 @@
         width: 100%;
         margin: 0 auto 0 30px;
 
-        @include breakpoints.custom(1440px) {
+        @include breakpoints.custom(1680px) {
           max-width: none;
           flex-direction: row;
           justify-content: space-between;
@@ -286,7 +282,7 @@
           color: colors.$text-dark;
           margin-bottom: 5px;
 
-          @include breakpoints.custom(1440px) {
+          @include breakpoints.custom(1680px) {
             align-items: center;
             display: flex;
           }

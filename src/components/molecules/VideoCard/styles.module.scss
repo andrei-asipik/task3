@@ -61,7 +61,7 @@
     width: 540px;
     height: 250px;
 
-    @include breakpoints.laptop {
+    @include breakpoints.tablet {
       width: auto;
       height: auto;
     }
